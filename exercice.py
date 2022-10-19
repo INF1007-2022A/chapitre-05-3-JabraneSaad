@@ -7,6 +7,25 @@ def get_num_letters(text):
 	return 0
 
 def get_word_length_histogram(text):
+
+	maxcount = 0
+	histo = []
+	for word in text:
+		if len(word) > maxcount:
+			maxcount = len(word)
+
+	for i in range(maxcount + 1):
+		histo.append(0)
+
+	for word in text:
+		histo[len(word)] += 1
+
+	return histo
+
+
+
+
+
 	return [0]
 
 def format_histogram(histogram):
